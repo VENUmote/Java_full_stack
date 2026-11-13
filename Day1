@@ -1,0 +1,16 @@
+Before Spring, you should understand Java properly.
+Day	Topics	What you must understand
+1	Java fundamentals	JVM, JRE, JDK, compilation
+2	OOP	Class, object, inheritance, polymorphism
+3	Advanced OOP	Abstraction, encapsulation, interfaces
+4	Collections	List, Set, Map, HashMap
+5	Exception handling	try, catch, finally, custom exceptions
+6	Java 8+	Lambda, Stream API, Optional
+7	Advanced concepts	Generics, annotations, reflection
+
+Practical exercises:
+- Student Management System
+- Employee Management System
+- CRUD using Java collections
+- Exception handling examples
+You should understand how objects communicate and how Java executes a program before moving forward.
