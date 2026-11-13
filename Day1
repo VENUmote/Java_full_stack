@@ -48,16 +48,7 @@ Java can implement the backend logic that connects these components.
 1.2 How Java works internally
 You must understand this before learning Spring Boot.
 
-
-
-
-
-
-
-
 dev.to
-
-
 Java execution follows these steps:
 1. Developer writes Java source code.
 2. Source code is saved with .java extension.
@@ -232,3 +223,160 @@ Execution flow:
 4. Check whether attendance is greater than or equal to 75.
 5. Both conditions are true.
 6. Print eligibility confirmation.
+
+
+1.6 Control statements
+Control statements decide which statements execute and how many times they execute.
+A. if-else
+int age = 20;
+
+if (age >= 18) {
+    System.out.println("Eligible to vote");
+} else {
+    System.out.println("Not eligible");
+}
+
+
+B. switch
+int choice = 2;
+
+switch (choice) {
+
+    case 1:
+        System.out.println("Add Student");
+        break;
+
+    case 2:
+        System.out.println("View Student");
+        break;
+
+    case 3:
+        System.out.println("Delete Student");
+        break;
+
+    default:
+        System.out.println("Invalid choice");
+}
+
+
+Real-world use: Menu-driven applications, banking operations and management systems.
+C. Loops
+For loop:
+for (int i = 1; i <= 5; i++) {
+
+    System.out.println(i);
+
+}
+
+
+While loop:
+int i = 1;
+
+while (i <= 5) {
+
+    System.out.println(i);
+
+    i++;
+}
+
+
+Do-while loop:
+int i = 1;
+
+do {
+
+    System.out.println(i);
+
+    i++;
+
+} while (i <= 5);
+
+
+Difference:
+- for: Best when the number of iterations is known.
+- while: Best when repetition depends on a condition.
+- do-while: Executes at least once.
+1.7 Methods in Java
+Definition: A method is a block of code that performs a particular task. It helps us reuse logic instead of writing the same code repeatedly.
+
+Real-world example:
+
+In a banking application, you might have:
+- deposit()
+- withdraw()
+- checkBalance()
+- transferMoney()
+Syntax
+returnType methodName(parameters) {
+
+    // statements
+
+    return value;
+}
+
+
+Implementation
+public class Calculator {
+
+    static int add(int a, int b) {
+
+        return a + b;
+
+    }
+
+    public static void main(String[] args) {
+
+        int result = add(10, 20);
+
+        System.out.println(result);
+
+    }
+}
+
+
+Output:
+30
+
+
+How this works
+1. JVM starts execution from main().
+2. main() calls add(10, 20).
+3. Values are passed into parameters a and b.
+4. The method calculates a + b.
+5. It returns 30.
+6. The result is stored in result.
+Important: Understand parameters, arguments, return types, static methods and instance methods.
+Day 1 Practical Task
+Create a simple student marks calculator.
+
+Requirements:
+- Store student name.
+- Store marks in five subjects.
+- Calculate total.
+- Calculate average.
+- Display pass or fail.
+- Display grade using if-else.
+
+DAY 2 – Object-Oriented Programming (OOP)
+Very important for Spring Framework
+2.1 What is OOP?
+Definition: Object-Oriented Programming is a programming approach in which we organize code using classes and objects.
+
+Instead of writing all the code inside one large method, we divide our application into smaller, reusable components.
+Real-world example: College Management System
+Think about a college.
+
+It contains:
+- Students
+- Teachers
+- Courses
+- Departments
+- Classrooms
+Each entity has properties and behaviours.
+
+For example:
+Entity	Properties	Behaviours
+Student	Name, ID, marks	Study, attend
+Teacher	Name, subject	Teach, evaluate
+Course	Name, duration	Enroll, complete
+Account	Balance, number	Deposit, withdraw
