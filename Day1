@@ -14,3 +14,221 @@ Practical exercises:
 - CRUD using Java collections
 - Exception handling examples
 You should understand how objects communicate and how Java executes a program before moving forward.
+
+
+
+
+===============================================================================================================================================================
+Java Fundamentals
+1.1 What is Java?
+Definition:
+
+Java is a high-level, object-oriented, class-based programming language used to develop applications for web, mobile, desktop, enterprise systems and backend services.
+
+Java follows the principle:
+
+Write Once, Run Anywhere (WORA).
+
+It means you can compile a Java program into bytecode and execute that bytecode on different operating systems using a compatible JVM.
+Real-world applications
+Application	Java usage
+Banking applications	Transactions and account management
+E-commerce	Orders, payments and inventory
+Enterprise software	Business applications
+Backend development	REST APIs using Spring Boot
+Android	Android application development
+Microservices	Distributed backend systems
+
+For example, imagine an online shopping application:
+- Frontend displays products.
+- Java backend processes orders.
+- Database stores customer and product information.
+- Payment service processes transactions.
+Java can implement the backend logic that connects these components.
+1.2 How Java works internally
+You must understand this before learning Spring Boot.
+
+
+
+
+
+
+
+
+dev.to
+
+
+Java execution follows these steps:
+1. Developer writes Java source code.
+2. Source code is saved with .java extension.
+3. Java compiler (javac) compiles the source code.
+4. Compiler generates bytecode (.class).
+5. JVM loads the bytecode.
+6. JVM verifies and executes the bytecode.
+7. The program produces output.
+Example
+Create a file called HelloWorld.java.
+public class HelloWorld {
+
+    public static void main(String[] args) {
+
+        System.out.println("Hello Java!");
+
+    }
+}
+
+
+Compilation:
+javac HelloWorld.java
+
+
+This generates:
+HelloWorld.class
+
+
+Execution:
+java HelloWorld
+
+
+Output:
+Hello Java!
+
+
+Important Java components
+JDK – Java Development Kit
+
+Complete development toolkit. It includes the compiler, development utilities and runtime components.
+
+Real-world analogy: A complete workshop with all the tools needed to build something.
+
+
+JRE – Java Runtime Environment
+
+Provides the runtime environment and libraries needed to run Java applications.
+
+Analogy: The environment required to operate the finished product.
+
+
+JVM – Java Virtual Machine
+
+Loads, verifies and executes Java bytecode.
+
+Analogy: The engine that runs the Java application.
+
+
+Remember:
+- JDK = Development tools + runtime.
+- JRE = Runtime environment.
+- JVM = Executes bytecode.
+Modern Java distributions may not provide a separate JRE installation, but the conceptual distinction remains important.
+1.3 Variables in Java
+Definition: A variable is a named memory location used to store data during program execution.
+
+Real-world example:
+
+A college student has:
+- Name: Venu
+- Age: 22
+- Marks: 85.5
+- Passed: true
+We represent these values using variables.
+Syntax
+dataType variableName = value;
+
+
+Implementation
+public class VariablesExample {
+
+    public static void main(String[] args) {
+
+        String name = "Venu";
+        int age = 22;
+        double marks = 85.5;
+        boolean passed = true;
+
+        System.out.println(name);
+        System.out.println(age);
+        System.out.println(marks);
+        System.out.println(passed);
+    }
+}
+
+
+Output:
+Venu
+22
+85.5
+true
+
+
+1.4 Data types in Java
+Data types define what kind of value a variable can store.
+
+Java has two major categories.
+
+A. Primitive data types
+Type	Example	Purpose
+byte	byte a = 10;	Small integer
+short	short a = 100;	Short integer
+int	int a = 500;	Integer
+long	long a = 10000L;	Large integer
+float	float a = 10.5f;	Decimal
+double	double a = 20.55;	More precision
+char	char a = 'V';	Single character
+boolean	boolean a = true;	True or false
+
+B. Non-primitive/reference types
+- String
+- Arrays
+- Classes
+- Objects
+- Interfaces
+- Enums
+Example:
+String studentName = "Venu";
+
+int[] marks = {80, 90, 85};
+
+
+1.5 Operators
+Operators perform operations on values and variables.
+
+| Operator | Meaning | Example |
+|---|---|---|
+| + | Addition | 10 + 20 |
+| - | Subtraction | 20 - 10 |
+| * | Multiplication | 10 * 2 |
+| / | Division | 20 / 2 |
+| % | Remainder | 10 % 3 |
+| == | Equality | a == b |
+| != | Not equal | a != b |
+| && | Logical AND | a > 5 && b > 5 |
+| || | Logical OR | a > 5 || b > 5 |
+Real-world implementation: Student eligibility
+public class Eligibility {
+
+    public static void main(String[] args) {
+
+        int marks = 75;
+        int attendance = 85;
+
+        if (marks >= 40 && attendance >= 75) {
+
+            System.out.println("Student is eligible");
+
+        } else {
+
+            System.out.println("Student is not eligible");
+
+        }
+    }
+}
+
+
+Execution flow:
+1. Marks are 75.
+2. Attendance is 85.
+3. Check whether marks are greater than or equal to 40.
+4. Check whether attendance is greater than or equal to 75.
+5. Both conditions are true.
+6. Print eligibility confirmation.
